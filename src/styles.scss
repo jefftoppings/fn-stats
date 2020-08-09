@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$fortnite-stats-primary: mat-palette($mat-blue);
+$fortnite-stats-accent: mat-palette($mat-pink, A200, A100, A400);
+$fortnite-stats-warn: mat-palette($mat-red);
+$fortnite-stats-theme: mat-light-theme($fortnite-stats-primary, $fortnite-stats-accent, $fortnite-stats-warn);
+@include angular-material-theme($fortnite-stats-theme);
+
+// global styles
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,15 @@
+.lookup-card {
+  .card-title {
+    text-align: center;
+  }
+  .card-content {
+    padding: 24px 0;
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      .search-button {
+        margin-top: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<mat-card class="lookup-card">
+  <mat-card-title class="card-title">Lookup Stats</mat-card-title>
+  <mat-card-content class="card-content">
+    <div class="content-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Gamer Tag</mat-label>
+        <input matInput type="text" #gamerTag (keydown.enter)="searchGamerTag(gamerTag.value)"/>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="button" (click)="searchGamerTag(gamerTag.value)"
+              class="search-button">Search
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="playerStats$ | async as playerStats">
+  <mat-card-title class="card-title">Stats</mat-card-title>
+</mat-card>
