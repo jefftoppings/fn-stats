@@ -2,6 +2,12 @@
   <mat-card-title class="card-title">Lookup Stats</mat-card-title>
   <mat-card-content class="card-content">
     <div class="content-container">
+      <div class="input-title">Input</div>
+      <mat-radio-group (change)="inputRadioChanged($event)" class="radio-group">
+        <mat-radio-button color="primary" [value]="inputRadio.CONTROLLER" checked>Controller</mat-radio-button>
+        <mat-radio-button color="primary" [value]="inputRadio.KEYBOARD_MOUSE">Keyboard and Mouse</mat-radio-button>
+        <mat-radio-button color="primary" [value]="inputRadio.TOUCH">Touch</mat-radio-button>
+      </mat-radio-group>
       <mat-form-field appearance="outline">
         <mat-label>Gamer Tag</mat-label>
         <input matInput type="text" #gamerTag (keydown.enter)="searchGamerTag(gamerTag.value)"/>
